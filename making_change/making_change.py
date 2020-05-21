@@ -8,7 +8,19 @@ For example, `making_change(10)` should return 4, since there are 4 ways to make
 import sys
 
 def making_change(amount, denominations):
-    
+    if amount == 0: #if none, return 1
+      return 1
+    if amount < 0: #account fo rnegatives?
+      return 0
+
+    if len(denominations) <=0 and amount >0:
+      return 0 #if amount is less than 0 
+
+    else:
+      return making_change(amount - denominations[-1], denominations) + making_change(amount, denominations[:-1])
+ #(see cookie monster)
+#recursive call for amount-denomm
+
 
 
 if __name__ == "__main__":
