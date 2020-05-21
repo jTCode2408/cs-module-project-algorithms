@@ -1,11 +1,22 @@
 '''
 Input: a List of integers
 Returns: a List of integers
+Write a function that receives an array of integers and returns an array consisting of the product of all numbers in the array _except_ the number at that index. 
 '''
 def product_of_all_other_numbers(arr):
-    # Your code here
+    # traverse arr
+    #product for every elm
+    #how to exclude index?
+    #
+    product = [0 for _ in range(len(arr))]
+    multiplied = 1
+    for x in arr:
+        multiplied *= x
 
-    pass
+    for i in range(len(arr)):
+        product[i] = multiplied // arr[i]
+
+    return product
 
 
 if __name__ == '__main__':
