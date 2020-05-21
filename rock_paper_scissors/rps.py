@@ -10,7 +10,7 @@ Write a function `rock_paper_scissors` to generate all of the possible plays tha
 import sys
 
 def rock_paper_scissors(n):
-  outcomes = ['rock', 'scissors', 'paper',]
+  outcomes = ['scissors', 'paper', 'rock']
   arr = []
 
   stack =[]
